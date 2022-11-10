@@ -16,7 +16,7 @@ Console.SetCursorPosition(xc, yc);
 Console.WriteLine("*");
 
 
-int x = xa, y = xb;
+int x = xa, y = ya;
 int count = 0;
 
 while(count < 10000)
