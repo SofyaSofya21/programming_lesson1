@@ -1,5 +1,8 @@
-﻿int numberA = new Random().Next(1,11);
-int numberB = new Random().Next(1,11);
-Console.WriteLine(numberA);
-Console.WriteLine(numberB);
-Console.WriteLine(numberA + numberB);
+﻿Console.WriteLine("Введите первое число");
+int numberA = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите второе число");
+int numberB = Convert.ToInt32(Console.ReadLine());
+
+int result = numberA + numberB;
+
+Console.WriteLine($"Сумма этих чисел равна {result}");
