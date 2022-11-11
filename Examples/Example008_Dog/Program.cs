@@ -1,10 +1,17 @@
-﻿int count = 0;
-double distance = 10000;
+﻿Console.WriteLine("Введите любое расстояние больше 10");
+double distance = Convert.ToDouble(Console.ReadLine());
+
+int count = 0;
 double firstFriendSpeed = 1;
 double secondFriendSpeed = 2;
 double dogSpeed = 5;
 int friend = 2;
 double time;
+
+Console.WriteLine("Вводные данные:");
+Console.WriteLine($"Расстояние: {distance}");
+Console.WriteLine($"Скорость первого друга = {firstFriendSpeed}, скорость второго друга = {secondFriendSpeed}");
+Console.WriteLine($"Скорость собаки = {dogSpeed}, собака бежит от {friend}-го друга");
 
 while(distance>10)
 {
@@ -21,6 +28,4 @@ while(distance>10)
     distance = distance - (firstFriendSpeed + secondFriendSpeed) * time;
     count++;
 }
-Console.WriteLine("Собака пробежит ");
-Console.Write(count);
-Console.Write(" раз");
+Console.WriteLine($"Собака пробежит вот такое количество раз: {count}");
