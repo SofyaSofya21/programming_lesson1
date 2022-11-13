@@ -1,16 +1,26 @@
-﻿// Вывод максимума из 9 чисел
+﻿// Вывод максимума из 9 слуйчайных чисел
 
-int a1 = 1;
-int b1 = 2;
-int c1 = 3;
+void FillArray (int[] collection)
+{
+    int length = collection.Length;
+    int index = 0;
+    while(index<length)
+    {
+        collection[index] = new Random().Next(1,100);
+        index++;
+    }
+}
 
-int a2 = 4;
-int b2 = 5;
-int c2 = 6;
-
-int a3 = 7;
-int b3 = 8;
-int c3 = 9;
+void PrintArray (int[] arr)
+{
+    int count = arr.Length;
+    int position = 0;
+    while(position<count)
+    {
+        Console.WriteLine(arr[position]);
+        position++;
+    }
+}
 
 int Max(int arg1, int arg2, int arg3)
 {
@@ -20,9 +30,11 @@ int Max(int arg1, int arg2, int arg3)
     return result;
 }
 
-int max1 = Max(a1, b1, c1);
-int max2 = Max(a2, b2, c2);
-int max3 = Max(a3, b3, c3);
-int max = Max(max1, max2, max3);
+int[] array = new int[10];
 
-Console.WriteLine(max);
+FillArray(array);
+PrintArray(array);
+
+int max = Max(Max(array[0],array[1],array[2]),Max(array[3],array[4],array[5]),Max(array[6],array[7],array[8]));
+
+Console.WriteLine($"Максимум в массиве -> {max}");
